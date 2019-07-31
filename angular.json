@@ -24,9 +24,19 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/bootstrap/dist/css/bootstrap.min.css",
+              "src/app/font-awesome/css/font-awesome.min.css",
+              "src/app/Ionicons/css/ionicons.min.css",
+              "src/app/dist/css/AdminLTE.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/jquery/dist/jquery.min.js",
+              "src/app/bootstrap/dist/js/bootstrap.min.js",
+              "src/app/jquery-slimscroll/jquery.slimscroll.min.js",
+              "src/app/fastclick/lib/fastclick.js",
+              "src/app/dist/js/adminlte.min.js"
+            ]
           },
           "configurations": {
             "production": {

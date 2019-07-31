@@ -1,21 +1,160 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Personas
+        <small></small>
+      </h1>
+
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-info" id="person-table" >
+            <div class="box-header">
+              <h3 class="box-title">Lista de Personas</h3>
+
+              <div class="box-tools">
+                <button id="new-person" class="btn btn-primary btn-sm" type="button"><i class="fa fa-plus"></i>Nuevo</button>
+                &nbsp;
+                <ul class="pagination pagination-sm no-margin pull-right">
+                  <li id="first" ><a data-page="1" href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li id="last" ><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="tableP" class="table table-bordered table-striped">
+                <tbody>
+                  <tr id="head" >
+                    <th style="width: 10px">#</th>
+                    <th>Nombre</th>
+                    <th>Apellidos </th>
+                    <th style="width: 40px">Avatar</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <img class="rounded" style="width:30px;height:30px"  src=""/>
+                    </td>
+                    <td>
+                      <button class="btn btn-success btn-xs" type="button">Editar</button>
+                      <button class="btn btn-primary btn-xs" type="button">Detalle</button>
+                    </td>
+                  </tr>
+              </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <div class="box box-info" id="person-detail">
+            <div class="box-header">
+              <h3 class="box-title">Detalle de Persona</h3>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="col-md-4" id="field001">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Avatar</label>
+                    <img class="rounded" id="avatar" style="width:100px;height:100px;display:block"  src=""/>
+                  </div>
+              </div>
+              <div class="col-md-8" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Nombre</label>
+                  <input type="text" class="form-control" id="nombre">
+                </div>
+              </div>
+              <div class="col-md-8" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Apellido Paterno</label>
+                  <input type="text" class="form-control" id="apellidopat">
+                </div>
+              </div>
+              <div class="col-md-8" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Apellido Materno</label>
+                  <input type="text" class="form-control" id="apellidomat">
+                </div>
+              </div>
+              <div class="col-md-6" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">E-mail</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">@</div>
+                    <input type="text" class="form-control pull-right" id="email">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Fecha de Nacimiento</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="fchnac">
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-5" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Fecha de Ingreso</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="fchingreso">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <button class="btn btn-primary pull-right" type="submit">Grabar</button>
+                <button class="btn btn-default" type="submit">Retroceder</button>
+            </div>  
+
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.1.0
+    </div>
+    <strong>.</strong>
+  </footer>
+
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- ./wrapper -->
 
 <router-outlet></router-outlet>
